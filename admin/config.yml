@@ -1,0 +1,44 @@
+backend:
+  name: github
+  repo: muftiraheemuddinsahib/mufti.sahib.site   # change this to your repo
+  branch: main
+  # optional: use_graphql: true
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+local_backend: false
+
+collections:
+  - name: "pages"
+    label: "صفحے"
+    files:
+      - label: "صفحۂ اوّل"
+        name: "home"
+        file: "content/ur/index.md"
+        fields:
+          - { label: "متن (Body)", name: "body", widget: "markdown" }
+
+  - name: "articles"
+    label: "مضامین"
+    folder: "content/ur/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "عنوان", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "تاریخ", name: "date", widget: "datetime" }
+      - { label: "زمرہ", name: "category", widget: "select", options: ["فقہ","حدیث","عصری"] }
+      - { label: "خلاصہ", name: "excerpt", widget: "text" }
+      - { label: "متن", name: "body", widget: "markdown" }
+      - { label: "دستیابی", name: "access", widget: "select", options: ["public","restricted"], default: "public" }
+
+  - name: "research"
+    label: "تحقیقی مقالات"
+    folder: "content/ur/research"
+    create: true
+    fields:
+      - { label: "عنوان", name: "title", widget: "string" }
+      - { label: "خلاصہ (Abstract)", name: "abstract", widget: "text" }
+      - { label: "PDF فائل", name: "pdf", widget: "file" }
+      - { label: "دستیابی", name: "access", widget: "select", options: ["public","restricted"], default: "public" }
