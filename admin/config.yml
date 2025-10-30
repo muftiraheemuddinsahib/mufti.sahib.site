@@ -1,7 +1,10 @@
 backend:
   name: github
-  repo: muftiraheemuddinsahib/mufti.sahib.site   # change this to your repo
+  repo: muftiraheemuddinsahib/mufti.sahib.site   # your GitHub user/repo
   branch: main
+  base_url: https://api.github.com
+  auth_scope: repo
+  open_authoring: true
   # optional: use_graphql: true
 
 media_folder: "static/uploads"
