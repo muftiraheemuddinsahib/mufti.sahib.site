@@ -4,9 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Decap CMS</title>
-    <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+
+    <!-- Decap CSS (important so the app bootstraps properly) -->
+    <link rel="stylesheet" href="https://unpkg.com/decap-cms@latest/dist/decap-cms.css" />
+
+    <!-- Decap JS -->
+    <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js" defer></script>
   </head>
   <body>
+    <!-- Mount point required by Decap -->
     <div id="decap-cms"></div>
   </body>
 </html>
