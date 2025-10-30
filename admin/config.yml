@@ -1,10 +1,11 @@
 backend:
   name: github
-  repo: muftiraheemuddinsahib/mufti.sahib.site   # your GitHub user/repo
+  repo: muftiraheemuddinsahib/mufti.sahib.site
   branch: main
   base_url: https://api.github.com
   auth_scope: repo
   open_authoring: true
+  auth_endpoint: "https://mufti-oauth.onrender.com/auth"
   # optional: use_graphql: true
 publish_mode: editorial_workflow
 
